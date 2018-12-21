@@ -1,0 +1,24 @@
+package com.hzq.dexparse.struct;
+
+import com.hzq.dexparse.utils.Utils;
+
+/**
+ * Created by hezhiqiang on 2018/12/19.
+ */
+
+public class EncodedField {
+    /**
+     * struct encoded_field
+     {
+         uleb128 filed_idx_diff; // index into filed_ids for ID of this filed
+         uleb128 access_flags; // access flags like public, static etc.
+     }
+     */
+    public byte[] filed_idx_diff; //指向field_id
+    public byte[] access_flags;
+
+    @Override
+    public String toString() {
+        return "field_idx_diff:" + Utils.bytesToHexString(filed_idx_diff) + ",access_flags:" + Utils.bytesToHexString(filed_idx_diff);
+    }
+}
